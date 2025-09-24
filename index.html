@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physiotherapy Clinic</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: #0073e6;
+      color: #fff;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: url("https://source.unsplash.com/1600x600/?physiotherapy,health") no-repeat center center/cover;
+      color: #1d176e;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .content h2 {
+      margin-bottom: 20px;
+      color: #0073e6;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Physiotherapy Clinic</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Feel Better, Move Better, Live Better</h2>
+    <p>Your recovery journey starts here.</p>
+  </section>
+
+  <section class="content">
+    <h2>Welcome to Our Clinic</h2>
+    <p>
+      We specialize in physiotherapy treatments for sports injuries, 
+      back & neck pain, post-surgery rehabilitation, and mobility improvement.  
+      Chat with our assistant anytime to book or reschedule an appointment.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Physiotherapy Clinic | All Rights Reserved</p>
+  </footer>
+
+  <!-- 🔹 IBM Watson Assistant Integration -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "021e3185-8082-47da-8f9a-00fc3abf0000", // Your integration ID
+      region: "au-syd", // Your region
+      serviceInstanceID: "be134346-647d-434c-ad6d-fdc3ad37052a", // Your service instance ID
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" 
+            + (window.watsonAssistantChatOptions.clientVersion || 'latest') 
+            + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+</html>
